@@ -1,0 +1,20 @@
+{
+	"Foo": {
+		"name": "Bar",
+		"character": "Ironclad",
+		"cost": "2",
+		"type": "Power",
+		"rarity": "Special",
+		"description": "hello",
+		"upgrade_description": "world"
+	},
+	"Test": {
+		"name": "Er",
+		"character": null,
+		"cost": "X",
+		"type": "Skill",
+		"rarity": "Basic",
+		"description": "more.",
+		"upgrade_description": "tests."
+	}
+}
