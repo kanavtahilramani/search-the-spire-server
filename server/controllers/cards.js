@@ -21,9 +21,29 @@ module.exports = {
       .then(cards => res.status(200).send(cards))
       .catch(error => res.status(400).send(error));
   },
-  retrieve(req, res) {
+  names(req, res) {
+    return Cards
+      .all()
+      .then(cards => res.status(200).send(cards.map(element => { return element.name; })))
+      .catch(error => res.status(400).send(error));
+  },
+  getCardById(req, res) {
     return Cards
       .findById(req.params.id)
+      .then(card => {
+        if (!card) {
+          return res.status(404).send({
+            message: 'Card does not exist.',
+          });
+        }
+
+        return res.status(200).send(card);
+      })
+      .catch(error => res.status(400).send(error));
+  },
+  getCardByName(req, res) {
+    return Cards
+      .findOne({ where: {name: req.params.name}})
       .then(card => {
         if (!card) {
           return res.status(404).send({

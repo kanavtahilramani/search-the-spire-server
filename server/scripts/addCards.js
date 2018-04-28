@@ -1,7 +1,6 @@
 const Cards = require('../models').Cards;
-const data = require('../config/sample');
-process.env.NODE_ENV = "staging";
-// console.log(process.env.NODE_ENV);
+const data = require('../config/data');
+// process.env.NODE_ENV = "staging";
 
 let add = (name, character, cost, type, rarity, description, upgrade_description, upgrade_cost) => {
 	Cards.create({
