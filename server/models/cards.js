@@ -27,7 +27,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     upgrade_description: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
+    },
+    upgrade_cost: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   }, {});
   Cards.associate = function(models) {

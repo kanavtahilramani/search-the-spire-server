@@ -16,4 +16,6 @@ testem.log
 .DS_Store
 
 # env
-/server/config/config.json
+/server/config/*
+.env
+.env.default

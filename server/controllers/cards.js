@@ -35,4 +35,8 @@ module.exports = {
       })
       .catch(error => res.status(400).send(error));
   },
+  search(req, res) {
+    return Cards
+      .findOne({ where: {name: req.body.name}})
+  }
 };

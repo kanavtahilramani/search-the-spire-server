@@ -12,7 +12,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       character: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: true
       },
       cost: {
         type: Sequelize.STRING
@@ -27,7 +28,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       upgrade_description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      upgrade_cost: {
+        type: Sequelize.STRING,
+        allowNull: true
       },
       createdAt: {
         allowNull: false,
